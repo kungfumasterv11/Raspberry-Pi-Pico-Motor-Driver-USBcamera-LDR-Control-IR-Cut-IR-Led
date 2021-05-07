@@ -6,3 +6,4 @@ LDR gece ve gündüz değerlerini okur ,koşullar sağlanırsa makine kendini Re
 
 Start fonksiyonu gecemi / gündüzmü bakar ,duruma göre işlem yapar...
 
+EKLEMELER YAKINDA !
