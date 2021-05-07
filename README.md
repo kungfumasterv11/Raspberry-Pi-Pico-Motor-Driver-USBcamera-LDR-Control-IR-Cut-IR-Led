@@ -1,4 +1,4 @@
-# Raspberry-Pi-Pico-Motor-Driver-Webcam-LDR-Control-IR-Cut-IR-Led
+# Raspberry-Pi-Pico-Motor-Driver-USBcamera-LDR-Control-IR-Cut-IR-Led
 
 Bu program hiçbir garanti vermez..USB KAMERA'ya IR-Filtre ve IR-Led ekleme amacıyla yapıldı..
 
