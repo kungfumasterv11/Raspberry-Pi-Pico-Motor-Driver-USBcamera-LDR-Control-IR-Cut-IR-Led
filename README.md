@@ -12,7 +12,6 @@ Resimdeki IR-FİLTRE 5V-110ma max çekiyor..100 ohm direnç ile 60ma 'e düşür
 LB1838 kapatılır..Ledler açılır.
 
 
-
 EKLEMELER YAKINDA !
 
-NO-LED : ![Alt Text](https://github.com/kungfumasterv11/Raspberry-Pi-Pico-Motor-Driver-USBcamera-LDR-Control-IR-Cut-IR-Led/blob/main/NO-LED.png)
+NO-LED : ![Alt Text](https://github.com/kungfumasterv11/Raspberry-Pi-Pico-Motor-Driver-USBcamera-LDR-Control-IR-Cut-IR-Led/blob/main/Raspberry%20Pico%20USB%20Camera%20IR-CUT%20IR%20LED.png)
