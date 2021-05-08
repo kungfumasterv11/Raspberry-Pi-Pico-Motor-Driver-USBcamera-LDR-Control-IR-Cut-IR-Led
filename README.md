@@ -15,5 +15,4 @@ LB1838 kapatılır..Ledler açılır.
 
 EKLEMELER YAKINDA !
 
-![GitHub Logo](/images/logo.png)
 Format: ![Alt Text](https://github.com/kungfumasterv11/Raspberry-Pi-Pico-Motor-Driver-USBcamera-LDR-Control-IR-Cut-IR-Led/blob/main/NO-LED.png)
