@@ -14,8 +14,11 @@ LB1838 kapatılır..Ledler açılır.
 KAYNAK makinesi :
 
 http://docs.micropython.org/en/latest/library/index.html
+
 https://www.raspberrypi.org/documentation/rp2040/getting-started/#rp2040-boards
+
 https://www.raspberrypi.org/documentation/rp2040/getting-started/#board-specifications
+
 https://www.raspberrypi.org/documentation/rp2040/getting-started/#getting-started-with-micropython
 
 
