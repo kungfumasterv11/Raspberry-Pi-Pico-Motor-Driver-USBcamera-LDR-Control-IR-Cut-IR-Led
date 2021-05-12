@@ -11,6 +11,12 @@ IR-LED pini (25)"onboard led" olarak ayarlı,deiştirin..
 Resimdeki IR-FİLTRE 5V-110ma max çekiyor..100 ohm direnç ile 60ma 'e düşürebilirsiniz..Filtreyi sorunsuz döndürür..Filtre döndükten sonra 
 LB1838 kapatılır..Ledler açılır.
 
+KAYNAK makinesi :
+
+http://docs.micropython.org/en/latest/library/index.html
+https://www.raspberrypi.org/documentation/rp2040/getting-started/#rp2040-boards
+https://www.raspberrypi.org/documentation/rp2040/getting-started/#board-specifications
+https://www.raspberrypi.org/documentation/rp2040/getting-started/#getting-started-with-micropython
 
 
 IR-LED pin GPIO-13: ![Alt Text](https://github.com/kungfumasterv11/Raspberry-Pi-Pico-Motor-Driver-USBcamera-LDR-Control-IR-Cut-IR-Led/blob/main/Raspberry%20Pico%20USB%20Camera%20IR-CUT%20IR%20LED.png)
