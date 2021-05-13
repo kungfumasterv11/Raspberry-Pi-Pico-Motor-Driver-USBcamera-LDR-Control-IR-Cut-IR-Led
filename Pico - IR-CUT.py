@@ -3,24 +3,25 @@ import time
 from machine import Pin, ADC
 #[][][][][][][][][][][][][][][][][ W1 ][][][][][][][][][][][][][][][][][
 
-LED = Pin(25, Pin.OUT) 			# IR-LED Start Voltajı için Transistörü aç
-LB1838 = Pin(14, Pin.OUT)		# LB1838 Start Voltajı için Transistörü aç
-LB1838İNP1 = Pin(15, Pin.OUT)	# LB1838-İNP1 sağ >< sol '+' yada '-' ,ayarı
-LDR = ADC(26) 					# LDR sinyal ANALOG giriş Pin'i
+powerled = Pin(25, Pin.OUT)		# Pico Onboard smd led..
+LED = Pin(13, Pin.OUT) 			# IR-LED Start Voltajı için Transistörü açar
+LB1838 = Pin(14, Pin.OUT)		# LB1838 Start Sinyalini ENA1 'e yollar
+LB1838İNP1 = Pin(15, Pin.OUT)	# LB1838-İNP1 sağ >< sol '+' yada '-' ,ayarlar
+LDR = ADC(26) 					# LDR sinyali için ANALOG giriş Pin'i
 
 lightlevel = LDR.read_u16() # LDR sinyalini sayıya çevir "LDR.read_u16()"
-LED.off()					# IR-LED kapalı
-LB1838.off()				# LB1838 kapalı
-
+LED.off()					# IR-LED kapatıldı
+LB1838.off()				# LB1838 kapatıldı
 #[][][][][][][][][][][][][][][][][][][][][][][]][][][][][][][][][]][][][-(*2)
 
-def gunduz(): # IR-CUT-filtre GUNDUZ " lightlevel < 61611 " çalışır
+def gunduz(): # IR-CUT-filtre GUNDUZ " lightlevel < 61611 " küçükse çalışır
 	
-	LED.off() 			# IR-LED kapalı
+	powerled.off()
+	LED.off() 			# IR-LED kapatıldı
 	LB1838İNP1.low() 	# Motor SOL < dönüyor LB1838-İNP1 " - " low
-	LB1838.on() 		# LB1838 açık
-	time.sleep(0.7)		# Filtre " gunduz " tarafına döndü
-	LB1838.off() 		# LB1838 kapalı
+	LB1838.on() 		# LB1838 açıldı
+	time.sleep(0.7)		# Filtre " gunduz " tarafına döndürüldü
+	LB1838.off() 		# LB1838 kapatıldı
 	
 	while True:				# "LDR sinyali > 61611 gece" olana kadar dön[][-(*3)
 		if(LDR.read_u16() > 61611): # LDR sinyali ADC(26) okunuyor..
@@ -30,13 +31,14 @@ def gunduz(): # IR-CUT-filtre GUNDUZ " lightlevel < 61611 " çalışır
 			time.sleep(2)
 #[][][][][][][][][][][][][][][][][][][][][][][]][][][][][][][][][]][][][-(*2)
 
-def gece(): # IR-CUT-filtre GECE " lightlevel > 61611 " çalışır
+def gece(): # IR-CUT-filtre GECE " lightlevel > 61611 " büyükse çalışır
 	
-	LED.off() 			# IR-LED kapalı
+	powerled.on()
+	LED.off() 			# IR-LED kapatıldı
 	LB1838İNP1.high() 	# Motor SAG > dönüyor - LB1838-İNP1 " + "high
-	LB1838.on() 		# LB1838 açık
-	time.sleep(0.7)		# Filtre " gece " tarafına döndü
-	LB1838.off() 		# LB1838 kapalı
+	LB1838.on() 		# LB1838 açıldı
+	time.sleep(0.7)		# Filtre " gece " tarafına döndürüldü
+	LB1838.off() 		# LB1838 kapatıldı
 	LED.on() 			# IR-LED Start Voltajı için Transistörü aç
 	
 	while True:				# "LDR sinyali < 61611 gündüz"olana kadar dön][-(*3)
@@ -56,22 +58,20 @@ def start():# 65535  ‘full voltage ADC’.
 			gunduz()				# " gunduz " dür.
 		
 #[T]\\\\\\\\\\\\\\\\\\\\\\\\\\\\[]-TEST-[]////////////////////////////[T]
-
 def test():
 	for i in range(5):
 		LED.off()
+		powerled.off()
 		LB1838İNP1.low()
 		LB1838.on()
-		time.sleep(2)
-		
+		time.sleep(2)		
 		lightlevel = LDR.read_u16()
-		print(lightlevel)
-		
+		print(lightlevel)	
 		LED.on()
+		powerled.on()
 		LB1838İNP1.high()
 		time.sleep(2)
 #[T]////////////////////////////[]-TEST-[]\\\\\\\\\\\\\\\\\\\\\\\\\\\\[T]
 
-test()
-
-# start()
+# test()
+start()
