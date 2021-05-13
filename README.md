@@ -21,6 +21,8 @@ https://www.raspberrypi.org/documentation/rp2040/getting-started/#board-specific
 
 https://www.raspberrypi.org/documentation/rp2040/getting-started/#getting-started-with-micropython
 
+https://www.kontrolkalemi.com/forum/members/kesmez.3801/
+
 
 IR-LED pin GPIO-13: ![Alt Text](https://github.com/kungfumasterv11/Raspberry-Pi-Pico-Motor-Driver-USBcamera-LDR-Control-IR-Cut-IR-Led/blob/main/Raspberry%20Pico%20USB%20Camera%20IR-CUT%20IR%20LED.png)
 
