@@ -27,5 +27,5 @@ https://www.kontrolkalemi.com/forum/members/kesmez.3801/
 
 : ![Alt Text](https://github.com/kungfumasterv11/Raspberry-Pi-Pico-Motor-Driver-USBcamera-LDR-Control-IR-Cut-IR-Led/blob/main/Raspberry%20Pico%20USB%20Camera%20IR-CUT%20IR%20LED.png)
 
-VİDEO : [![Watch the video](https://github.com/kungfumasterv11/Raspberry-Pi-Pico-Motor-Driver-USBcamera-LDR-Control-IR-Cut-IR-Led/blob/main/no-ir-led-transistor-demo.jpeg)](https://streamable.com/krb86q)
+VİDEO : [![Watch the video](https://github.com/kungfumasterv11/Raspberry-Pi-Pico-Motor-Driver-USBcamera-LDR-Control-IR-Cut-IR-Led/blob/main/F%C4%B0N%C4%B0SH.jpeg)](https://streamable.com/krb86q)
 
